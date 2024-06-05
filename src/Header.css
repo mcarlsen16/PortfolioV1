@@ -1,0 +1,39 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: var(--transition);
+    z-index: 11;
+    backdrop-filter: blur(10px);
+    /* padding: 0 50px; */
+    display: flex;
+    place-items: center;
+    box-sizing: inherit;
+    background-color: var(--rich-black-trans);
+    font-family: var(--font-mono);
+}
+
+.ScrollUp {
+    height: var(--nav-scroll-height);
+    transform: translateY(0);
+    /* background-color: rgba(10, 25, 47, 0.85); */
+    /* background-color: var(--rich-black-trans); */
+    box-shadow: 0 10px 30px -10px var(--nav-shadow);
+}
+
+.ScrollDown {
+    height: var(--nav-scroll-height);
+    transform: translateY(calc(var(--nav-scroll-height) * -1));
+    box-shadow: 0 10px 30px -10px var(--nav-shadow);
+}
+
+.TopOfPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+    /* background-color: rgba(10, 25, 47, 0.85); */
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+}

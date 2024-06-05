@@ -1,0 +1,212 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --font-sans: 'AR One Sans','Calibre','Inter','San Francisco','SF Pro Text',system-ui,sans-serif;
+  --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  color: var(--alice-blue);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --nav-scroll-height: 70px; /* Adjust as necessary */
+  --nav-height: 100px; /* Adjust as necessary */
+  --nav-shadow: rgba(0, 0, 0, 0.5); /* Adjust as necessary */
+  /* --transition: all 0.3s ease; Adjust as necessary */
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  
+  /* Font size for nav bar*/
+  --fs-nb: 14px;
+  --fs-nbb: 11px;
+
+  /* Background Colors */
+
+  --rich-black: #001A23;
+  --rich-black-trans: rgba(0, 26, 35, .85);
+  /* Background highlight color */
+  --gunmetal: #002e3d;
+
+  /* Text Color 
+  RGB: 232, 241, 242 */
+  --alice-blue: #e8f1f2;
+  /* --slate: #8892b0; */
+  /* B5B5B5 passes color contrast test for gunmetal and rich-black*/
+  --slate: #B5B5B5;
+  
+  /* Accent Color */
+  --flame: #CF5C36;
+
+  --border-radius: 4px;
+}
+
+#root {
+  min-width: 100%;
+}
+
+.highlight {
+  color: var(--flame);
+}
+
+a {
+  font-weight: 500;
+  color: var(--flame);
+  text-decoration: inherit;
+  /* font-size: 22px; */
+}
+
+a:hover {
+  color: var(--flame);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+hr {
+  width: 250px;
+  color: var(--alice-blue);
+}
+
+.heading::after {
+  content: "";
+  /* display: inline-block;
+  position: relative; */
+  /* top: -10px; */
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--flame);
+}
+
+
+.button {
+  background-color: transparent;
+  color: var(--flame); /* Text color is --flame by default */
+  border: 1px solid var(--flame); /* Solid border with color --flame */
+  padding: 0.75rem 1rem; /* Adjust padding as needed */
+  font-size: var(--fs-nb); /* Adjust font size as needed */
+  border-radius: var(--border-radius); /* Rounded borders using a CSS variable */
+  position: relative; /* Needed for positioning the pseudo-element */
+  overflow: clip; /* Ensures the expanding effect stays within the button - WAS OVERFLOW */
+  cursor: pointer; /* Cursor pointer to indicate it's clickable */
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition for text and border color */
+  display: inline-block; /* Ensures the button does not stretch across the container */
+  line-height: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%; /* Larger initial size to ensure a circle */
+  height: 300%; /* Larger initial size to ensure a circle */
+  background-color: var(--flame); /* Background color is --flame */
+  border-radius: 50%; /* Ensuring it's always perfectly circular */
+  transform: translate(-50%, -50%) scale(0); /* Start from center and no visibility */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth expansion transition */
+  z-index: -1; /* Below the text */
+  opacity: 0; /* Start invisible */
+}
+
+.button:hover::before {
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly larger scale to fill gaps */
+  opacity: 1; /* Fully visible on hover */
+}
+
+.button:hover {
+  color: white; /* Text color changes to white on hover */
+  border-color: var(--flame); /* Ensure the border color is consistent */
+}
+
+
+.initialBodySection {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  /* background-color: cyan; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bodySection {
+  padding: 100px 0px;
+  margin: 0px auto;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--rich-black);
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--alice-blue);
+}
+
+h2 { 
+  color: var(--alice-blue);
+  font-size: 32px; /* Might move for custom sizing for section headings */
+}
+
+h3 {
+  color: var(--alice-blue);
+  line-height: 1.3;
+}
+
+p {
+  color: var(--slate);
+  margin: 0px 0px 15px /* Spacing following paragraph */
+}
+
+.big-heading {
+  margin: 0px;
+  color: var(--flame);
+  font-size: 80px; /* Use clamp for adjustable font size */
+}
+
+.content {
+  padding: 0px 150px;
+}
+
+.projectContainer { 
+  border: 2px solid rgba(255, 255, 255, 0.87);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--gunmetal);  
+  margin: 0px 0px 20px;
+}
+
+/* #testSvg {
+  transform: scale(.25, .25);
+} */
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
