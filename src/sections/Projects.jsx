@@ -11,27 +11,8 @@ const Projects = () => {
       <section id="projects" className='bodySection'>
         <h2 className="heading">Some Projects Of Mine</h2>
         <div className="projectContainer">
-          <AgeGuesser/>
+          Oops, looks like nothing is here right now
         </div>
-        <div className="projectContainer">
-          <DrawingCanvas/>
-        </div>
-        <div className="projectContainer">
-          <GigasecondCalculator/>
-        </div>
-        <div className="projectContainer">
-          <PangramChecker/>
-        </div>
-        <div className="projectContainer">
-          <NuclearReactor/>
-        </div>
-        <div className="projectContainer">
-          <ArrayManipulator/>
-        </div>
-        <div className="projectContainer">
-          <SignBuilder/>
-        </div>
-
       </section>
       
     );
