@@ -1,7 +1,7 @@
 // Header.jsx
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-import './Header.css'; // Assuming you will move or duplicate the relevant CSS
+import './Header.css';
 
 const Header = () => {
     const [lastScrollY, setLastScrollY] = useState(0);

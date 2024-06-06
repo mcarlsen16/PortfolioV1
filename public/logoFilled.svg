@@ -1,0 +1,20 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 200 125"
+>
+  <path
+    id="path-8v6sgh2f6ng"
+    d="M150,110C164.71969,110,176.96335,120.60112,179.51256,134.58493L150,170L120.48744,134.58493C123.03665,120.60112,135.28031,110,150,110Z"
+    fill="rgb(207,92,54)"
+    stroke="none"
+    transform="translate(-50 -90)"
+  ></path>
+  <path
+    id="path-amvk5rfxurl"
+    d="M0,100L50,20L100,80L150,20L200,100"
+    fill="rgb(0,26,35)"
+    stroke="rgb(232,241,242)"
+    stroke-width="7"
+  ></path>
+</svg>

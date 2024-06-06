@@ -11,7 +11,7 @@ const Layout = () => {
     return (
         <div>
             <Header />
-            {/* <div style={{position:'fixed', bottom:"0px", right:"40px", writingMode:"vertical-rl", marginBottom: '20px', fontFamily:'var(--font-mono)', fontSize:'12px' }}>
+            {/* <div style={{position:'fixed', bottom:"0px", right:"40px", writingMode:"vertical-rl", marginBottom: '20px', fontFamily:'var(--font-mono)', fontSize:'15px' }}>
                 <a href='mailto:matthewdcarlsen@gmail.com'>matthewdcarlsen@gmail.com</a>
             </div> */}
             <div className='content'>

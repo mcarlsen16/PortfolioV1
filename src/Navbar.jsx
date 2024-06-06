@@ -1,11 +1,11 @@
 import { HashLink as Link } from 'react-router-hash-link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import "./Navbar.css"
 
 const Navbar = () => {
-
     const [sunY, setSunY] = useState(50); // Starting position of the sun, slightly above the horizon.
-
+    
     const handleMouseEnter = () => {
         setSunY(0); // Sun pops up to this position on hover.
     };
@@ -13,11 +13,14 @@ const Navbar = () => {
     const handleMouseLeave = () => {
         setSunY(50); // Sun returns to the initial position on unhover.
     };
+    
+    const location = useLocation();
+
+    const isActive = (link) => location.hash === link ? 'active' : '';
 
     return (
         <nav>
             <div>
-                {/* <Link smooth to="/#home">Home</Link> */}
                 <a href='/'>
                     {/* <svg width="50" height="31.25" viewBox='0 0 200 125' id='testSvg'>
                         <path id="path-8v6sgh2f6ng" d="M150,110C164.71969,110,176.96335,120.60112,179.51256,134.58493L150,170L120.48744,134.58493C123.03665,120.60112,135.28031,110,150,110Z" fill="var(--flame)" stroke="none" transform="translate(-50 -90)"></path>
@@ -40,10 +43,18 @@ const Navbar = () => {
             </div>
             <div className="navStyleOptions">
                 <ul>
-                    <li className="navBarItems"><Link smooth to="/#about">About</Link></li>
-                    <li className="navBarItems"><Link smooth to="/#experience">Experience</Link></li>
-                    <li className="navBarItems"><Link smooth to="/#projects">Projects</Link></li>
-                    <li className="navBarItems"><Link smooth to="/#contact">Contact</Link></li>
+                    <li className={`navBarItems ${isActive('#about')}`}>
+                        <Link smooth to="/#about">About</Link>
+                    </li>
+                    <li className={`navBarItems ${isActive('#experience')}`}>
+                        <Link smooth to="/#experience">Experience</Link>
+                    </li>
+                    <li className={`navBarItems ${isActive('#projects')}`}>
+                        <Link smooth to="/#projects">Projects</Link>
+                    </li>
+                    <li className={`navBarItems ${isActive('#contact')}`}>
+                        <Link smooth to="/#contact">Contact</Link>
+                    </li>
                 </ul>
                 <div className='navBarItems'>
                     <a id="resume-button" className="button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>

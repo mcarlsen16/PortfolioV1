@@ -36,6 +36,23 @@ nav a {
     font-size: var(--fs-nb);
 }
 
+/* .navBarItems.active {
+    color: var(--flame);
+} */
+
+
+nav ul li.active a {
+    font-weight: bold;
+    color: var(--flame);
+
+}
+
+.navBarItems.active {
+    font-weight: bold;
+    color: var(--flame);
+    color: red;
+}
+
 /* #resume-button {
     font-size: var(--fs-nbb);
 } */
