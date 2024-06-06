@@ -46,7 +46,7 @@ const Navbar = () => {
                     <li className="navBarItems"><Link smooth to="/#contact">Contact</Link></li>
                 </ul>
                 <div className='navBarItems'>
-                    <a id="resume-button" className="button" href="">Resume</a>
+                    <a id="resume-button" className="button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
         </nav>
