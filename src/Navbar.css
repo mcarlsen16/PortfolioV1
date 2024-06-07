@@ -50,7 +50,7 @@ nav ul li.active a {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
+    /* padding: 10px; */
     z-index: 1001;
 }
 
@@ -89,6 +89,10 @@ nav ul li.active a {
         transition: transform 0.3s ease-in-out;
         transform: translateX(100%);
         z-index: 1000;
+    }
+
+    nav {
+        padding: 0px 10px;
     }
 
     .navStyleOptions.mobile-menu-open {
