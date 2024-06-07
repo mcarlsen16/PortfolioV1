@@ -207,6 +207,31 @@ p {
   margin: 10px
 }
 
+/* TEMP STYLING CODE FOR IMAGE, NEEDS REVISION */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3rds description, 1/3rd image */
+  gap: 20px; /* space between the columns */
+  align-items: center; /* vertically center the items */
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between paragraphs */
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center; /* horizontally center the image */
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto; /* make sure the image is responsive */
+  border-radius: 10px; /* optional: add some rounded corners */
+}
 
 /* #testSvg {
   transform: scale(.25, .25);
