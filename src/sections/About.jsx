@@ -2,11 +2,19 @@ const About = () => {
     return (
       <section id="about" className='bodySection'>
         <h2 className="heading">About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras sed felis eget velit aliquet sagittis. Morbi tristique senectus et netus. Mattis nunc sed blandit libero volutpat sed. Sed id semper risus in hendrerit gravida. Nullam eget felis eget nunc lobortis mattis aliquam. Vel risus commodo viverra maecenas accumsan. Eleifend quam adipiscing vitae proin. Sollicitudin tempor id eu nisl nunc. </p>
-        <p>Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Eget nunc lobortis mattis aliquam. Id donec ultrices tincidunt arcu non sodales. Ipsum faucibus vitae aliquet nec. Et malesuada fames ac turpis. Integer vitae justo eget magna fermentum iaculis eu non diam. Sit amet luctus venenatis lectus magna fringilla. Pellentesque adipiscing commodo elit at. Dolor morbi non arcu risus. Aliquet risus feugiat in ante metus dictum at. Consectetur a erat nam at lectus urna. Vitae congue eu consequat ac felis.</p>
-        <p>Those words above are just temporary space holders for my about me section.  They need to be updated as they but that will happen in due time.  These words here are just being written to take up space and make it look like more text is here than there really is.  If you are reading this you really should stop, there isn't any more information to be found.  At this point I don't know why you would continue to read unless you are just very bored.</p>
+        <p>Hello, my name is Matthew Carlsen.  I'm a 21-year-old software developer based in Wausau, Wisconsin.</p>
+        <p>
+          I am currently a student at Northcentral Technical College, where I also work as an Instructional Assistant.  
+          My interest in technology was sparked at a young age with games like Minecraft.  
+          Building block houses led me down the rabbit hole of learning more about computers, eventually assembling my own computer, and now to developing applications for them.  
+          I love to learn new things to feed my curiosity, which keeps me fascinated with innovative technology.  
+          I enjoy seeking out creative solutions to complex problems, and my current passion lies in artificial intelligence.
+        </p>
+        <p>
+          When I'm not at my computer, I love to get outdoors to hike, kayak, and take spontaneous camping trips.  
+          I take delight in picking up and learning about random hobbies, with a recent one being pottery.
+        </p>
       </section>
-      
     );
 
 }
