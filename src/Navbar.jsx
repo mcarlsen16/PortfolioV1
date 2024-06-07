@@ -20,9 +20,11 @@ const Navbar = () => {
     const isActive = (link) => location.hash === link ? 'active' : '';
 
     const toggleMobileMenu = () => {
-        setMobileMenuOpen(!isMobileMenuOpen);
-        document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden'; // Toggle body scroll
-        document.body.classList.toggle('menu-open', !isMobileMenuOpen);
+        if (window.innerWidth <= 768) {
+            setMobileMenuOpen(!isMobileMenuOpen);
+            document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden'; // Toggle body scroll
+            document.body.classList.toggle('menu-open', !isMobileMenuOpen);
+        }
     };
 
     useEffect(() => {
