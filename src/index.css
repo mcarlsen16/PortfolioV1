@@ -89,12 +89,12 @@ hr {
 
 .button {
   background-color: transparent;
-  color: var(--flame); /* Text color is --flame by default */
-  border: 1px solid var(--flame); /* Solid border with color --flame */
-  padding: 0.75rem 1rem; /* Adjust padding as needed */
-  font-size: var(--fs-nb); /* Adjust font size as needed */
-  border-radius: var(--border-radius); /* Rounded borders using a CSS variable */
-  position: relative; /* Needed for positioning the pseudo-element */
+  color: var(--flame); 
+  border: 1px solid var(--flame);
+  padding: 0.75rem 1rem;
+  font-size: var(--fs-nb);
+  border-radius: var(--border-radius);
+  position: relative;
   overflow: clip; /* Ensures the expanding effect stays within the button - WAS OVERFLOW */
   cursor: pointer; /* Cursor pointer to indicate it's clickable */
   transition: color 0.3s, border-color 0.3s; /* Smooth transition for text and border color */
@@ -107,12 +107,12 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300%; /* Larger initial size to ensure a circle */
-  height: 300%; /* Larger initial size to ensure a circle */
-  background-color: var(--flame); /* Background color is --flame */
+  width: 300%;
+  height: 300%; 
+  background-color: var(--flame);
   border-radius: 50%; /* Ensuring it's always perfectly circular */
   transform: translate(-50%, -50%) scale(0); /* Start from center and no visibility */
-  transition: transform 0.3s, opacity 0.3s; /* Smooth expansion transition */
+  transition: transform 0.3s, opacity 0.3s;
   z-index: -1; /* Below the text */
   opacity: 0; /* Start invisible */
 }
@@ -202,7 +202,6 @@ p {
 }
 
 .jobDetailsList li {
-  padding-left: 30px;
   list-style-type: none;
   margin: 10px
 }
@@ -233,20 +232,96 @@ p {
   border-radius: 10px; /* optional: add some rounded corners */
 }
 
-/* #testSvg {
-  transform: scale(.25, .25);
-} */
+@media (max-width: 768px) {
+  .bodySection {
+    padding: 50px 20px;
+    margin: 0px auto;
+    max-width: 100%;
+  }
 
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  .description {
+    padding: 0 20px;
   }
-  a:hover {
-    color: #747bff;
+
+  .imageContainer {
+    justify-content: center;
+    padding: 0 20px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1 {
+    font-size: 18px;
   }
-} */
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .big-heading {
+    font-size: 40px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .projectContainer {
+    padding: 10px;
+  }
+
+  /* .button {
+    font-size: var(--fs-nbb);
+    padding: 0.5rem 0.75rem;
+  } */
+}
+
+@media (max-width: 480px) {
+  .bodySection {
+    padding: 20px 10px;
+    margin: 0px auto;
+    max-width: 100%;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .description {
+    padding: 0 10px;
+  }
+
+  .imageContainer {
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .big-heading {
+    font-size: 32px;
+  }
+
+  .content {
+    padding: 0 10px;
+  }
+
+  .projectContainer {
+    padding: 5px;
+  }
+
+  /* .button {
+    font-size: var(--fs-nbb);
+    padding: 0.5rem 0.5rem;
+  } */
+}
