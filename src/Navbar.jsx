@@ -33,8 +33,6 @@ const Navbar = () => {
                             onMouseLeave={handleMouseLeave}>
                             {/* Orange circle (sun) */}
                             <circle cx="100" cy={sunY} r="30" fill="var(--flame)" className="sun"/>
-                            {/* Masking rect for sunset */}
-                            {/* <rect x="50" y="79" width="100" height="50" fill="var(--rich-black-trans)"/> */}
                             {/* Path for the letter M with drawing effect */}
                             <path d="M00 100 L50 20 L100 80 L150 20 L200 100" stroke="var(--alice-blue)" fill="var(--rich-black)" strokeWidth="7" strokeLinejoin="bevel"/>
                         </svg>
